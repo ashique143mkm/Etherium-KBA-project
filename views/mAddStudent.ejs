@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    
+    <title>SFTS|Management|Set Student Roll</title>
+    <!-- Latest compiled and minified CSS -->
+ <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+ 
+ <!-- jQuery library -->
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+ 
+ <!-- Popper JS -->
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+ 
+ <!-- Latest compiled JavaScript -->
+ <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script> 
+</head>
+<body class="jumbotron text-center bg-light">
+        <div class="jumbotron bg-light">
+        <h1 class="text-success display-3">SF<span class="text-warning">TS</span> </h1>
+        <h2 class="text-secondary">Management View </h2> <br>
+        <nav class="navbar navbar-expand-sm bg-light navbar-light btn btn-outline-success">
+          <ul class="navbar-nav">
+            <li class="nav-item ">
+              <a class="nav-link" href="/">Home | SFTS</a>
+            </li>
+            <li class="nav-item ">
+              <a class="nav-link " href="/management/managementView">Management</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/management/addFirmView">Add Firm</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/management/viewFirmView">View Firm</a>
+            </li>
+            <li class="nav-item ">
+              <a class="nav-link " href="/management/payToFirmView">Pay to Firm</a>
+            </li>
+            <!-- <li class="nav-item ">
+              <a class="nav-link" href="/management/withdrawFeeView">Withdraw Fee</a>
+            </li> -->
+            <li class="nav-item ">
+              <a class="nav-link " href="/management/orderDetailsView">Order Details</a>
+            </li>
+            <li class="nav-item ">
+              <a class="nav-link " href="/management/orderSummary">Order Summary</a>
+            </li>
+            <li class="nav-item active">
+              <a class="nav-link text-success" href="/management/addStudentView">Add Student</a>
+            </li>
+            <li class="nav-item ">
+              <a class="nav-link " href="/management/searchStudentView">Search Student</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link " href="/management/viewBalanceView">View Balance</a>
+            </li>
+            <li class="nav-item ">
+              <a class="nav-link " href="/management/studentFeeDetailsView">Student Fee Details</a>
+            </li>
+          </ul>
+        </nav>
+<br>
+
+
+    <div class="jumbotron bg-light border border-success">
+        <form action="/management/setStudentDetails" method="POST">
+                <input type="text" name="roll" placeholder="Roll No" required />
+                <br /><br />
+                <input type="text" name="sAddress" placeholder="Student Address" required />
+                <br /><br />
+                <input type="text" name="adhaarnum" placeholder="Adhaar Number" required />
+                <br /><br />
+                <input type="text" name="name" placeholder="Name" required />
+                <br /><br />
+                <input type="text" name="age" placeholder="Age" required />
+                <br /><br />
+                <!-- <h4> Indian : <input type="radio" name="indian" value="true" /> Yes <input type="radio" name="indian" value="false" /> No </h4> -->
+                Indian:
+                <div class="form-check-inline">
+                  <label class="form-check-label">
+                    <input type="radio" class="form-check-input" name="indian" value="true">Yes
+                  </label>
+                </div>
+        
+                <div class="form-check-inline">
+                  <label class="form-check-label">
+                    <input type="radio" class="form-check-input" name="indian" value="false">No
+                  </label>
+                </div>
+        
+        
+        
+                <br /><br />
+        
+        
+        
+                <div class="form-group">
+                  <label for="sel1">Gender</label>
+                  <select name="gender" id="sel1">
+                    <option value="">Select a Gender</option>
+                    <option value="0">Male</option>
+                    <option value="1">Female</option>
+                    <option value="2">Other</option>
+                  </select>
+                </div>
+                <br /><br />
+        
+        
+                <button type="submit" class="btn btn-outline-success">Submit</button>
+        
+        
+              </form>
+            </div>
+        
+        </div>
+    
+</body>
+</html>

@@ -1,0 +1,30 @@
+{
+  "name": "sfts",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "start": "node ./bin/www"
+  },
+  "dependencies": {
+    "alert-node": "^1.2.5",
+    "cookie-parser": "~1.4.4",
+    "debug": "~2.6.9",
+    "ejs": "~2.6.1",
+    "express": "~4.16.1",
+    "express-generator": "^4.16.1",
+    "http-errors": "~1.6.3",
+    "js-alert": "^1.0.4",
+    "morgan": "~1.9.1",
+    "solc": "^0.5.9",
+    "truffle": "^5.0.21",
+    "web3": "^1.0.0-beta.55"
+  },
+  "description": "A Dapp to track the funds that are spent by the management for the School properties and Student Welfare.",
+  "main": "app.js",
+  "devDependencies": {},
+  "keywords": [
+    "SFTS"
+  ],
+  "author": "Yadu N.M",
+  "license": "ISC"
+}

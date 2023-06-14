@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>SFTS | Student | Pay Fees
+  </title>
+   <!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+<!-- Popper JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script> 
+</head>
+
+<body class="jumbotron text-center bg-light">
+<div class="jumbotron bg-light">
+  <h1 class="text-success display-3">SF<span class="text-warning">TS</span> </h1>
+  <h2 class="text-secondary">Student View</h2>
+  <nav class="navbar navbar-expand-sm bg-light navbar-light btn btn-outline-success">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link" href="/">Home | SFTS</a>
+        </li>
+        <li class="nav-item ">
+          <a class="nav-link " href="/student/studentView">Student</a>
+        </li>
+        
+        <li class="nav-item ">
+          <a class="nav-link " href="/student/payFeeView">Pay fee</a>
+        </li>
+        <li class="nav-item active">
+          <a class="nav-link text-success" href="/student/orderSummaryView">Order Summary</a>
+        </li>
+        <li class="nav-item ">
+          <a class="nav-link " href="/student/viewBalanceView">View Balance</a>
+        </li>
+     
+      </ul>
+    </nav>
+    <br>
+
+<div class="jumbotron border border-success bg-light">
+    <table class="table table-sm table-bordered">
+        <thead class="bg-dark text-success">
+            <tr>
+                
+                <th>Order ID</th>
+                <th>Firm ID</th>
+                <th>Firm Address</th>
+                <th>Product Details</th>
+                <th>No. Of Units</th>
+                <th>Price Of One Unit</th>
+                <th>Total Price</th>
+               
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                    <td>
+                            <%= getOrderSummaryData._oId %>
+                        </td>
+                <td>
+                    <%= getOrderSummaryData._fId %>
+                </td>
+                <td>
+                    <%= getOrderSummaryData._fAddress %>
+                </td>
+                <td>
+                        <%= getOrderSummaryData._pDetails%>
+                    </td>
+                    <td>
+                        <%= getOrderSummaryData._numOfUnits%>
+                    </td>
+                    <td>
+                        <%= getOrderSummaryData._priceOfOneUnit%>
+                    </td>
+                    <td>
+                        <%= getOrderSummaryData._totalPrice%>
+                    </td>
+            </tr>
+
+           
+        </tbody>
+    </table>
+    </div>
+</div>
+
+
+
+
+</div>
+ </body>
+
+</html>
